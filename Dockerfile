@@ -3,7 +3,7 @@ FROM node:alpine
 WORKDIR /usr/app
 
 COPY package*.json ./
-RUN pm install
+RUN npm install
 
 COPY . .
 
