@@ -1,3 +1,7 @@
+/**
+ * Configuring server
+ */
+
 const express = require('express');
 const expressReactViews = require('express-react-views');
 const path = require('path');
@@ -16,6 +20,8 @@ class App {
   middlewares() {
     this.server.use(cors());
     this.server.use(bodyParser.urlencoded({ extended: true }));
+
+    this.server.use(express.static(path.resolve(__dirname, 'public')));
 
     this.server.set('views', path.resolve(__dirname, 'app', 'views'));
     this.server.set('view engine', 'jsx');

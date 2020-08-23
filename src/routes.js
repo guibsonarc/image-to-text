@@ -1,3 +1,7 @@
+/**
+ * Defining routes
+ */
+
 const { Router } = require('express');
 const path = require('path');
 
